@@ -1,0 +1,106 @@
+= Platform Comparison Checklist
+
+A catalog of attributes, qualities, and features supported by listed platforms.
+
+== Usage
+
+Please feel free to open issues or a pull request to contribute.
+
+Platforms should be in alphabetical order of project name.
+
+Some attributes are independent or mutually exclusive, the first line in the
+table makes this clear.
+
+* *O* denotes mutually exclusive properties
+* *X* denotes supported property, one or more
+
+== Comparison Tables
+
+=== Model Design Attributes
+
+.Step Work Parallelism
+[options="header"]
+|===
+| _Platform_ | Sequential | Parallel
+| - | O | O
+|===
+
+.Node Work Parallelism
+[options="header"]
+|===
+| _Platform_ | Sequential | Parallel
+| - | O | O
+|===
+
+
+.Node Data Parallelism
+[options="header"]
+|===
+| _Platform_ | Split | Partitioned
+| - | X | X
+|===
+
+.Node Topology
+[options="header"]
+|===
+| _Platform_ | Two Node | Directed In-Tree | Directed Acyclic Graph | Directed Acyclic MultiGraph
+| - | O | O | O | O
+|===
+
+.Node Data Routing
+[options="header"]
+|===
+| _Platform_ | Forward | Broadcast | Ordered Scatter-Gather | Unordered Scatter-Gather
+| - | X | X | X | X
+|===
+
+.Intermediate Result Availability
+[options="header"]
+|===
+| _Platform_ | Unavailable | Available
+| - | O | O
+|===
+
+.Staging
+[options="header"]
+|===
+| _Platform_ | Simultaneous | Incremental
+| - | X | X
+|===
+
+.Mode
+[options="header"]
+|===
+| _Platform_ | Offline | Online
+| - | X | X
+|===
+
+=== Implementation Features
+
+.Speculative Execution
+[options="header"]
+|===
+| _Platform_ | Unavailable | Available
+| - | O | O
+|===
+
+.Data Routing Service
+[options="header"]
+|===
+| _Platform_ | Unavailable | Available
+| - | O | O
+|===
+
+.Routed Data Durability
+[options="header"]
+|===
+| _Platform_ | Shared Filesystem | Local Filesystem | On-Heap Memory | Off-Heap Memory
+| - | X | X | X | X
+|===
+
+.Intermediate Result Durability
+[options="header"]
+|===
+| _Platform_ | Shared Filesystem | Local Filesystem | On-Heap Memory | Off-Heap Memory
+| - | X | X | X | X
+|===

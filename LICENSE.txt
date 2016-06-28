@@ -1,0 +1,8 @@
+Copyright (c) 2016 Chris K Wensel. All Rights Reserved.
+
+All documents and data in this project are licensed under the
+Creative Common License:
+
+  Attribution-NonCommercial-ShareAlike 4.0 International
+
+  https://creativecommons.org/licenses/by-nc-sa/4.0/
